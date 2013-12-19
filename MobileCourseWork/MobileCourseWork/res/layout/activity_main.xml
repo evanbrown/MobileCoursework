@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding= "utf-8"?>
+
+<!-- The maps assigned id and name
+	It's layout,width and height are set to match the screen size.
+	It has Glasgow's coordinates to default there on Start up
+	It also has map type set to normal and a set of user interface controls
+	
+ -->
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.MapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    map:cameraBearing="0"
+    map:cameraTargetLat="55.865149"
+    map:cameraTargetLng="-4.258004"
+    map:cameraTilt="30"
+    map:cameraZoom="11"
+    map:mapType="normal"
+    map:uiCompass="true"
+    map:uiRotateGestures="true"
+    map:uiScrollGestures="true"
+    map:uiTiltGestures="true"
+    map:uiZoomControls="true"
+    map:uiZoomGestures="true" >
+    
+    <!-- This is the image button to change map types.
+    It has an id so it can be found by code in the Main Activity class.
+    It has a borderless button style to just see the image itself.
+    It also has a margin from the left and from the top to define it's position. -->
+
+    <ImageButton
+        android:id="@+id/HybridButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/maps"/>
+    
+    <Button
+        android:id="@+id/PreviousGamesButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="58dp"
+        android:textSize="12sp"
+        android:text="Previous Games" />
+    
+    <Button
+        android:id="@+id/user_location"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="400dp"
+        android:textSize="12sp"
+        android:text="Go To " />
+    
+    <EditText
+        android:id="@+id/user_lat"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="380dp"
+        android:textSize="12sp"
+        android:hint = "Enter Latitude" />
+    
+    <EditText
+        android:id="@+id/user_lng"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="410dp"
+        android:textSize="12sp"
+        android:hint="Enter Longitude" />
+        
+   
+        
+
+</fragment>
